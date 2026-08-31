@@ -10,17 +10,17 @@ from movie_analyzer import Movie, refactor_movie_list, top_certified_fresh_movie
 
 class MovieAnalyzerTests(unittest.TestCase):
     def test_refactor_movie_list_creates_movie_records(self):
-        movies = refactor_movie_list([[1, 9.0, "Interstellar", True]])
+        movies = refactor_movie_list([[1, 9.0, "Jurassic Park", True]])
 
         self.assertEqual(
             movies,
-            [Movie(1, 9.0, "Interstellar", True)],
+            [Movie(1, 9.0, "Jurassic Park", True)],
         )
 
     def test_top_certified_fresh_movies_filters_and_sorts(self):
         movie_list = [
             [1, 9.0, "Interstellar", True],
-            [2, 10.0, "Not Certified", False],
+            [2, 10.0, "Avatar", False],
             [3, 9.5, "Arrival", True],
         ]
 
